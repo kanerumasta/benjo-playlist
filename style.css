@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+nav.scrolled {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+}
+nav {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.nav-icon:hover {
+  scale: 110%;
+}
+.banner img {
+  width: 100%;
+}
+.nav-icon {
+  width: 25px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.left-nav {
+  display: flex;
+  height: 50px;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.left-nav img {
+  width: 45px;
+  margin-right: 10px;
+}
+.left-nav h3 {
+  text-transform: capitalize;
+
+  font-weight: bolder;
+}
+.left-nav em {
+  color: rgb(171, 0, 0);
+  font-style: normal;
+}
+
+.right-nav {
+  margin-right: 20px;
+}
+
+.videos-list {
+  position: relative;
+  margin: 10px 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+
+  margin-top: 50px;
+
+  transition: 0.2s ease-in-out;
+}
+.box:hover {
+  cursor: pointer;
+}
+
+.box:hover video {
+  border-radius: 0px;
+}
+
+.video-container {
+  position: relative;
+  width: 250px;
+  height: 140px;
+  border-radius: 15px;
+
+  transition: 0.2s;
+}
+
+.video-container .video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.box:hover .like {
+  display: flex;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 110px;
+  padding-left: 10px;
+  justify-content: center;
+}
+.picimage {
+  width: 80%;
+  height: 80%;
+  background-color: aqua;
+}
+.description .channelinfo {
+  display: flex;
+}
+.description h3 {
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: normal;
+  font-weight: bolder;
+}
+.description img {
+  width: 30px;
+}
+.description p {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.like {
+  display: none;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.like img {
+  width: 20px;
+  margin-right: 10px;
+}
+.share:hover {
+  opacity: 0.6;
+}
+.videotitle {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.channelinfo {
+  margin-bottom: 10px;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+.channelinfo p {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.videotitle img {
+  margin-right: 10px;
+}
+.less-opacity {
+  opacity: 0.5;
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  z-index: 200;
+  display: none;
+}
+.pop-up video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  border: #fff 1px solid;
+}
+.pop-up span {
+  color: #fff;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  z-index: 1000;
+  font-size: 30px;
+
+  font-weight: bolder;
+}
+.pop-up span:hover {
+  cursor: pointer;
+  color: rgb(255, 204, 0);
+}
